@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.villip.simpleproject.MainActivity;
 import com.example.villip.simpleproject.R;
 
 import java.util.ArrayList;
