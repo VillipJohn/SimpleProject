@@ -5,21 +5,21 @@ package com.example.villip.simpleproject.calendar;
  */
 public class ItemObject {
 
-    private String date;
+    private int date;
     private int img_alarm;
     private int img_note;
 
-    public ItemObject(String date, int img_alarm, int img_note) {
+    public ItemObject(int date, int img_alarm, int img_note) {
         this.date = date;
         this.img_alarm = img_alarm;
         this.img_note = img_note;
     }
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 

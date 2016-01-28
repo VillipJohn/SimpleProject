@@ -23,6 +23,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
 
+        //setVisibility(View.INVISIBLE)
+
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_days, null);
         RecyclerViewHolders rcv = new RecyclerViewHolders(layoutView);
         return rcv;
@@ -30,7 +32,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerViewHolders holder, int position) {
-        holder.card_date.setText(itemList.get(position).getDate());
+        int date = itemList.get(position).getDate();
+        String date_string = Integer.toString(date);
+        holder.card_date.setText(date_string);
         holder.alarm.setImageResource(itemList.get(position).getImg_alarm());
         holder.note.setImageResource(itemList.get(position).getImg_note());
     }

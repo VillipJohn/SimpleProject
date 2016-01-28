@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-import com.example.villip.simpleproject.calendar.CalendarFragment;
+import com.example.villip.simpleproject.calendar.CalendarMainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if(position == 0) {
-                return new CalendarFragment();
+                return new CalendarMainFragment();
             }
             return PlaceholderFragment.newInstance(position + 1);
         }
