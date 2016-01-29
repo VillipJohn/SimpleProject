@@ -8,8 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.Spinner;;
 
 import com.example.villip.simpleproject.R;
 
@@ -22,6 +21,8 @@ import java.util.List;
 public class CalendarMainFragment extends Fragment {
     private GridLayoutManager lLayout;
     private String months;
+
+    private  RecyclerView rView;
 
     public CalendarMainFragment() {
         // Required empty public constructor
@@ -40,7 +41,7 @@ public class CalendarMainFragment extends Fragment {
         List<ItemObject> rowListItem = getAllItemList();
         lLayout = new GridLayoutManager(getContext(), 7);
 
-        RecyclerView rView = (RecyclerView)rootView.findViewById(R.id.recycler_view);
+        rView = (RecyclerView)rootView.findViewById(R.id.recycler_view);
         rView.setHasFixedSize(true);
         rView.setLayoutManager(lLayout);
 
@@ -90,6 +91,8 @@ public class CalendarMainFragment extends Fragment {
 
         return allItems;
     }
+
+
 
 
 }

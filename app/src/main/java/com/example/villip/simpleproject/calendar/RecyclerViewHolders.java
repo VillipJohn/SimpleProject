@@ -1,12 +1,17 @@
 package com.example.villip.simpleproject.calendar;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.villip.simpleproject.R;
+
+
 
 
 public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -25,6 +30,10 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(view.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
+        Context context = view.getContext();
+        Intent intent = new Intent(context, ListEventsActivity.class);
+        context.startActivity(intent);
+
+        //Toast.makeText(view.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
     }
 }

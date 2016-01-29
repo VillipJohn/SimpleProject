@@ -20,4 +20,5 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+    <string name="title_activity_list_events">List Events</string>
 </resources>
